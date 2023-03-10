@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-radh
+  namespace: build-e2e-chmg-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:3752c6f844b95bb884a966d55f75ba795d07f7ea09822beee45e547d870b2043
+        name: my-python
+        resources: {}
+status: {}
